@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "3638fece-699f-4994-bc03-041549c0c1b7",
+		"name": "Hospicare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27430192"
+	},
+	"item": [
+		{
+			"name": "Registar_Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Tomas\",\r\n    \"nacionalidade\": \"Portuguesa\",\r\n    \"genero\": \"Masculino\",\r\n    \"password\": \"password\",\r\n    \"data_nascimento\": \"11/12/2003\",\r\n    \"email\": \"tomas03silva@gmail.com\",\r\n    \"telemovel\": \"935444013\",\r\n    \"username\": \"Tomas03Silva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/register/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"register",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registar_Assistant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Filipa Soares\",\r\n    \"nacionalidade\": \"Portuguesa\",\r\n    \"genero\": \"Feminino\",\r\n    \"password\": \"password2\",\r\n    \"data_nascimento\": \"19/11/2003\",\r\n    \"email\": \"filipasoares@gmail.com\",\r\n    \"telemovel\": \"910101010\",\r\n    \"username\": \"FilipaSoares\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/register/assistant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"register",
+						"assistant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registar_Nurse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Joao Martins\",\r\n    \"nacionalidade\": \"Portuguesa\",\r\n    \"genero\": \"Masculino\",\r\n    \"password\": \"password3\",\r\n    \"data_nascimento\": \"19/10/2003\",\r\n    \"email\": \"joaomartins@gmail.com\",\r\n    \"telemovel\": \"910101010\",\r\n    \"username\": \"JoaoMartins\",\r\n    \"hierarquia\": \"1\",\r\n    \"role\": [\"Chefe-Principal\",\"Ajudante\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/register/nurse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"register",
+						"nurse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registar_Doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Tiago Cardoso\",\r\n    \"nacionalidade\": \"Portuguesa\",\r\n    \"genero\": \"Masculino\",\r\n    \"password\": \"Cardoso\",\r\n    \"data_nascimento\": \"29/11/2003\",\r\n    \"email\": \"tiago2003fb@gmail.com\",\r\n    \"telemovel\": \"963161832\",\r\n    \"username\": \"Tiago10Cardoso\",\r\n    \"licenca\": \"101010\",\r\n    \"especializacoes\": [\"Cardiologia\",\"Psquiatria\",\"Neurologia\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/register/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"register",
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fazer_Login_Patient",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Tomas03Silva",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRvbWFzMDNTaWx2YSJ9.Xmty1upZxaRPou8bhAZ6VOfCz3moU01K2qen0uKWUAQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fazer_Login_Assistant",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "FilipaSoares",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IkZpbGlwYVNvYXJlcyJ9.ek90l8GS1m03z8BDf1Cfk51r6TuPWowgUgEYrYHZcLg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fazer_Login_Nurse",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password3",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "JoaoMartins",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IkpvYW9NYXJ0aW5zIn0._kRUMnSREMUG4Up77QKrTwBVsZJw3BCfZSGXs35C5BQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fazer_Login_Doctor",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Cardoso",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Tiago10Cardoso",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRpYWdvMTBDYXJkb3NvIn0.773ZPXuwCg5-H0-_imaI8jvqXLFBPqZjD_KUqTxPPAA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar_consulta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRvbWFzMDNTaWx2YSJ9.Xmty1upZxaRPou8bhAZ6VOfCz3moU01K2qen0uKWUAQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data_marcada\": \"05-06-2024\",\r\n    \"hora_inicio\": \"14:00\",\r\n    \"hora_final\": \"14:30\",\r\n    \"tipo\": \"De Rotina\",\r\n    \"sala_appointment\": \"2\",\r\n    \"custo\": \"45.00\",\r\n    \"doctor_id\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/appointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver_Consulta",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRvbWFzMDNTaWx2YSJ9.Xmty1upZxaRPou8bhAZ6VOfCz3moU01K2qen0uKWUAQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/appointments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"appointments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar_Surgery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IkZpbGlwYVNvYXJlcyJ9.ek90l8GS1m03z8BDf1Cfk51r6TuPWowgUgEYrYHZcLg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data_marcada\": \"12-09-2024\",\r\n    \"hora_inicio\":\"12:40\",\r\n    \"hora_final\":\"13:50\",\r\n    \"sala_surgery\":\"2\",\r\n    \"tipo\":\"Neuro\",\r\n    \"custo\":\"120.00\",\r\n    \"doctor_id\":\"4\",\r\n    \"nurses\":[\"3\"],\r\n    \"user_id\":\"1\",\r\n    \"quarto\": \"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/surgery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"surgery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar_Prescription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRpYWdvMTBDYXJkb3NvIn0.773ZPXuwCg5-H0-_imaI8jvqXLFBPqZjD_KUqTxPPAA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data_inicial\": \"05-06-2024\",\r\n    \"data_final\": \"10-06-2023\",\r\n    \"quantidade\": \"2\",\r\n    \"appointment\": \"1\",\r\n    \"medications\": [{\"medication_id\": \"2\",\"tipo\":\"Ben-U-Ron\",\"sintomas\": \"Dores de Cabeca\",\"probabilidade\":\"2\"},\r\n    {\"medication_id\": \"1\",\"tipo\":\"Brofen\",\"sintomas\": \"Dores de Costas\",\"probabilidade\":\"1\"}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/prescription/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"prescription",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver_Prescription",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRpYWdvMTBDYXJkb3NvIn0.773ZPXuwCg5-H0-_imaI8jvqXLFBPqZjD_KUqTxPPAA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/prescriptions/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"prescriptions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Executar_pagamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlRvbWFzMDNTaWx2YSJ9.Xmty1upZxaRPou8bhAZ6VOfCz3moU01K2qen0uKWUAQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantidade\" : \"10\",\r\n    \"data_maxima\":\"07-06-2024\",\r\n    \"forma_pagamento\": \"Mb_way\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/bills/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"bills",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Daily",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IkZpbGlwYVNvYXJlcyJ9.ek90l8GS1m03z8BDf1Cfk51r6TuPWowgUgEYrYHZcLg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/Hospicare/daily/05-06-2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Hospicare",
+						"daily",
+						"05-06-2024"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

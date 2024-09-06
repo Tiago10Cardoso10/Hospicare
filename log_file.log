@@ -1,0 +1,53 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 806-921-156
+INFO:logger:POST /Hospicare/register/<user_type>
+INFO:logger:POST /Hospicare/register/<user_type> - Sucesso ao registar
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:21:37] "POST /Hospicare/register/patient HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/register/<user_type>
+INFO:logger:POST /Hospicare/register/<user_type> - Sucesso ao registar
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:21:41] "POST /Hospicare/register/assistant HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/register/<user_type>
+INFO:logger:POST /Hospicare/register/<user_type> - Sucesso ao registar
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:21:45] "POST /Hospicare/register/nurse HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/register/<user_type>
+INFO:logger:POST /Hospicare/register/<user_type> - Sucesso ao registar
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:21:47] "POST /Hospicare/register/doctor HTTP/1.1" 200 -
+INFO:logger:PUT /Hospicare/user
+INFO:logger:PUT /Hospicare/user - Sucesso no Login
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:21:51] "PUT /Hospicare/user HTTP/1.1" 200 -
+INFO:logger:PUT /Hospicare/user
+INFO:logger:PUT /Hospicare/user - Sucesso no Login
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:21:55] "PUT /Hospicare/user HTTP/1.1" 200 -
+INFO:logger:PUT /Hospicare/user
+INFO:logger:PUT /Hospicare/user - Sucesso no Login
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:21:58] "PUT /Hospicare/user HTTP/1.1" 200 -
+INFO:logger:PUT /Hospicare/user
+INFO:logger:PUT /Hospicare/user - Sucesso no Login
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:22:00] "PUT /Hospicare/user HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/appointment
+INFO:logger:POST /Hospicare/appointment - Sucesso ao agendar appointment 1
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:22:08] "POST /Hospicare/appointment HTTP/1.1" 200 -
+INFO:logger:GET /Hospicare/appointments/1
+INFO:logger:GET /Hospicare/appointments/ - Mostrado appointment com sucesso
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:22:13] "GET /Hospicare/appointments/1 HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/register/<user_type>
+INFO:logger:POST /Hospicare/register/<user_type> - Sucesso ao registar
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:23:12] "POST /Hospicare/register/nurse HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/surgery
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:23:24] "POST /Hospicare/surgery HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/prescription/
+INFO:logger:POST /Hospicare/prescription/ - Prescricao adicionada com sucesso
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:23:31] "POST /Hospicare/prescription/ HTTP/1.1" 200 -
+INFO:logger:GET /Hospicare/prescriptions/<int:person_id>
+INFO:logger:Prescrições mostradas com sucesso
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:23:35] "GET /Hospicare/prescriptions/1 HTTP/1.1" 200 -
+INFO:logger:POST /Hospicare/bills/<int:bill_id>
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:23:39] "POST /Hospicare/bills/1 HTTP/1.1" 200 -
+INFO:logger:GET /Hospicare/daily/05-06-2024
+INFO:werkzeug:127.0.0.1 - - [27/May/2024 15:23:45] "GET /Hospicare/daily/05-06-2024 HTTP/1.1" 200 -
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
